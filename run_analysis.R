@@ -71,5 +71,5 @@ library(magrittr)
 tidy_dataset <- dataset %>% group_by(activity, subjects) %>%
                             summarise_each(funs(mean))
 
-#create txt file to import into GitHub
+#create text file to export into Working Directory
 tidy_dataset <- write.table(tidy_dataset, file= "tidy_dataset.txt", row.name=FALSE)
