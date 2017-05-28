@@ -5,4 +5,4 @@ This repository hosts the R code and documentation files for the Coursera's "Get
 The data used for this project is available at the following website:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-You can find the script with the R code used to get and clean the dataset: run_analysis.R
+#You can find the script with the R code used to get and clean the dataset: run_analysis.R
