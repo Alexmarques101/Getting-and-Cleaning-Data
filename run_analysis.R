@@ -61,6 +61,8 @@ colnames(dataset) <- gsub("fBodyGyroJerkMag", "frequencybodygyroscopejerkmagnitu
 colnames(dataset) <- gsub("fBodyBodyAccJerkMag", "frequencybodybodyaccelarationjerkmagnitude", colnames(dataset))
 colnames(dataset) <- gsub("fBodyBodyGyroMag", "frequencybodybodyaccelarationmagnitude", colnames(dataset))
 colnames(dataset) <- gsub("fBodyBodyGyroJerkMag", "frequencybodybodygyroscopejerkmagnitude", colnames(dataset))
+colnames(dataset) <- gsub("-", "", colnames(dataset))
+colnames(dataset) <- gsub("()", "", colnames(dataset))
 colnames(dataset)<-tolower(colnames(dataset))
 
 #average of each variable by activity and subject
