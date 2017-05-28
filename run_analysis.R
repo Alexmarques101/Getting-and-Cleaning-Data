@@ -1,6 +1,6 @@
 #################################### Getting and Cleaning Data Project ############################################
 
-#downloading the data
+#setting the working directory and downloading the data
 wd <- setwd("C:/Users/Acer/Desktop/COURSERA/Data Science/Getting and Cleaning Data/week4")
 url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip "
 samsung <- download.file(url, destfile = "samsung_data.zip", mode = "wb")
@@ -29,7 +29,7 @@ colnames(col_names)<-as.character(unlist(col_names[1,]))
 #naming columns of test_train with features
 colnames(test_train)<-colnames(col_names)
 
-#using grep to find pattern in colnames
+#omit all the variables that contain the word "mean" and "std"
 test_train <- test_train[,grep("mean|std", colnames(test_train))]
 
 #import activity labels
